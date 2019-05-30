@@ -1,9 +1,7 @@
 <script>
   import Square from './Square.svelte';
-  let squares = Array(9).fill(null);
-  function handleClick(i) {
-    squares[i] = 'X'
-  }
+  export let squares;
+  export let handleClick;
 </script>
 <style>
   .board-row:after {
