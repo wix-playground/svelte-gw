@@ -1,9 +1,6 @@
 <script>
   export let value = null;
-
-  function handleClick() {
-    value = 'X';
-  }
+  export let handleClick;
 </script>
 <style>
   .square {

@@ -1,5 +1,6 @@
 <script>
   import Board from './Board.svelte';
+  let status = 'Next player: X';
 </script>
 <style>
   .game-logo {
@@ -31,7 +32,7 @@
 <div class="game">
   <Board />
   <div class="game-info">
-    <div><!-- TODO --></div>
+    <div>{status}</div>
     <ol><!-- TODO --></ol>
   </div>
 </div>
