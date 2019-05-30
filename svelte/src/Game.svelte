@@ -1,13 +1,20 @@
 <script>
   import Board from './Board.svelte';
+  import { calculateWinner } from './utils';
 
   let squares = Array(9).fill(null);
   let xIsNext = true;
 
-  $: status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  let status, winner;
+  $: winner = calculateWinner(squares);
+  $: if (winner) {
+    status = `Winner: ${winner}`;
+  } else {
+    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  }
 
   function handleClick(i) {
-    if (squares[i]) {
+    if (squares[i] || winner) {
       return;
     }
     squares[i] = xIsNext ? 'X' : 'O';
