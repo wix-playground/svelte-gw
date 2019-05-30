@@ -1,10 +1,10 @@
-import App from './App.svelte';
+import Game from './Game.svelte';
 
-const app = new App({
+const game = new Game({
 	target: document.body,
 	props: {
 		name: 'world'
 	}
 });
 
-export default app;
+export default game;
