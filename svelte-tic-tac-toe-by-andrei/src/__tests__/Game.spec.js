@@ -1,10 +1,10 @@
-const {
+import {
   render,
   cleanup,
   fireEvent,
   waitForElement
-} = require("svelte-testing-library");
-const Game = require("../src/Game.svelte");
+} from '@testing-library/svelte';
+import Game from '../Game.svelte';
 
 beforeEach(cleanup);
 

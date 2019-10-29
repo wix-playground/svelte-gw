@@ -1,14 +1,14 @@
 <script>
   import Board from './Board.svelte';
   import PastMoves from './PastMoves.svelte';
-  import { calculateWinner } from './utils';
+  import { calculateWinner } from './utils.js';
 
   let history = [{
     squares: Array(9).fill(null)
   }];
   let xIsNext = true;
 
-  let status, winner;
+  let status, winner, current;
   let currentIndex = history.length - 1;
   $: current = history[currentIndex];
   $: winner = calculateWinner(current.squares);

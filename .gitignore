@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
 svelte/public/bundle.*
+svelte-tic-tac-toe-by-andrei/public/bundle.*
 .idea
 package-lock.json
